@@ -1,0 +1,23 @@
+<header class="navbar">
+
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      
+    </div>
+  </div>
+  <ul class="nav justify-content-end">
+
+    <li>
+      <a (click)="translateService.use('tr')">
+        <img src="assets/bayrak/Turkey.png">
+      </a>
+    </li>
+    <li>
+      <a (click)="translateService.use('en')">
+        <img src="assets/bayrak/United-Kingdom.png">
+      </a>
+    </li>
+  </ul>
+</header>
+
+<router-outlet ></router-outlet>

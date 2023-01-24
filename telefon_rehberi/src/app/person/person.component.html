@@ -1,0 +1,57 @@
+
+<div class="container">
+    
+  <div class="row">
+      
+      <div class="col-md-8 mx-auto">
+
+        <form #kisiForm="ngForm" >
+
+          <h1 >{{'persons'|translate}}</h1>
+          <div class="form-group"style="padding-top:20px;">
+              <input  type="text" placeholder="{{ 'name' | translate }}" #ad="ngModel" [(ngModel)]="formModel.name" class="form-control" name="ad" id="ad" required>
+              <div *ngIf="(ad.invalid&&ad.dirty&&formModel.name!=null)" class="alert alert-danger">{{ 'name-required' | translate }}</div>
+          </div>
+        
+          <div class="form-group"style="padding-top:20px;">
+              <input type="text"  placeholder="{{ 'surname' | translate }}" #soyad="ngModel" [(ngModel)]="formModel.surname" class="form-control" name="soyad" id="soyad" required>
+              <div *ngIf="(soyad.invalid&&soyad.dirty&&formModel.surname!=null)" class="alert alert-danger">{{ 'surname-required' | translate }}</div>
+          </div>
+        
+          <div class="form-group"style="padding-top:20px;">
+              <input type="text" pattern="[0-9]{11}"  placeholder="{{ 'cell-phone' | translate }}" #cepTelefonu="ngModel" [(ngModel)]="formModel.cellPhone"  class="form-control" name="cepTelefonu" id="cepTelefonu" required>
+              <div *ngIf="(cepTelefonu.invalid&&cepTelefonu.dirty&&formModel.cellPhone!=null)" class="alert alert-danger">{{ 'cell-phone-required' | translate }}</div>
+          </div>
+        
+          <div class="btn-group" role="group" aria-label="Basic example">
+           <button type="button" (click)="kaydet()" class="btn btn-primary mt-2" [disabled]="kisiForm.invalid">{{ 'save' | translate }}</button>
+          <button type="button" (click)="silOpenDialog()" class="btn btn-primary mt-2" [disabled]="kisiForm.invalid">{{ 'delete' | translate }}</button>
+          
+          </div>
+              
+          
+        
+        </form>
+
+          
+        <ag-grid-angular
+          class="ag-theme-balham grid-list"
+          [columnDefs]="columnDefs"
+          [defaultColDef]="defaultColDef"
+          [rowData]="rowData"
+          [rowSelection]="'single'"
+          [animateRows]="true"
+          (cellClicked)="onCellClicked($event)"
+        ></ag-grid-angular>
+
+        <button class="clear-button" (click)="clear()">{{ 'clear' | translate }}</button>
+
+          
+      </div> 
+     
+  </div>
+
+  
+</div>
+
+

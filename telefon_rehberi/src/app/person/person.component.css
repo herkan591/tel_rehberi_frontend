@@ -1,0 +1,17 @@
+
+.container{
+    padding-top: 20px;
+}
+.clear-button{
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 4px;
+    color: black;
+}
+.grid-list{
+    width: 85%; 
+    height: 300px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+

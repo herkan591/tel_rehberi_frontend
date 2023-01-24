@@ -1,0 +1,16 @@
+{
+    "tr":"Türkçe",
+    "en":"English",
+    "name":"Ad",
+    "surname":"Soyad",
+    "save":"Kaydet",
+    "delete":"Sil",
+    "cell-phone":"Cep Telefonu",
+    "clear":"Temizle",
+    "name-required":"Ad Gereklidir!",
+    "surname-required":"Soyad Gereklidir!",
+    "cell-phone-required":"Cep Telefonu Gereklidir!",
+    "persons":"Kişiler"
+
+
+}

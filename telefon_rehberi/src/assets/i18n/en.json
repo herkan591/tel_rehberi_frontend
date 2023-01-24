@@ -1,0 +1,14 @@
+{
+    "tr":"Türkçe",
+    "en":"English",
+    "name":"Name",
+    "surname":"Surname",
+    "cell-phone":"Cell Phone",
+    "save":"Save",
+    "delete":"Delete",
+    "clear":"Clear",
+    "name-required":"Name Required!",
+    "surname-required":"Surname Required!",
+    "cell-phone-required":"Cell Phone Required!",
+    "persons":"Persons"
+}
